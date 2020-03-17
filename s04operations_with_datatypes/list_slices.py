@@ -13,4 +13,3 @@ print(monday_temperatures[-1])
 print(monday_temperatures[3:5])
 print(monday_temperatures[3:])
 print(monday_temperatures[-2:])
-
