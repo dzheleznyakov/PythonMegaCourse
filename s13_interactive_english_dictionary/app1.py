@@ -17,8 +17,8 @@ def translate(w):
     if w in data:
         return data[w]
 
-    if w.capitalize() in data:
-        return data[w.capitalize()]
+    if w.title() in data:
+        return data[w.title()]
 
     if w.upper() in data:
         return data[w.upper()]
@@ -30,7 +30,7 @@ def translate(w):
     best_match = matches[0]
     yn = input("Did you mean '%s' instead? Enter Y if yes, or N if no: " % best_match)
     if yn.upper() == "Y":
-        return data[best_match ]
+        return data[best_match]
     elif yn.upper() == "N":
         return not_found_message
     else:
@@ -44,6 +44,6 @@ while True:
     translation = translate(word)
     if type(translation) == list:
         for definition in translation:
-            print(definition)
+            print("* %s" % definition)
     else:
-        print(translation)
+        print("* %s" % translation)
